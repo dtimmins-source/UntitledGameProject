@@ -1,0 +1,13 @@
+C:\Users\dtimmins\source\repos\UntitledGameProject\UntitledGameProject\bin\Debug\netcoreapp3.1\UntitledGameProject.exe
+C:\Users\dtimmins\source\repos\UntitledGameProject\UntitledGameProject\bin\Debug\netcoreapp3.1\UntitledGameProject.deps.json
+C:\Users\dtimmins\source\repos\UntitledGameProject\UntitledGameProject\bin\Debug\netcoreapp3.1\UntitledGameProject.runtimeconfig.json
+C:\Users\dtimmins\source\repos\UntitledGameProject\UntitledGameProject\bin\Debug\netcoreapp3.1\UntitledGameProject.runtimeconfig.dev.json
+C:\Users\dtimmins\source\repos\UntitledGameProject\UntitledGameProject\bin\Debug\netcoreapp3.1\UntitledGameProject.dll
+C:\Users\dtimmins\source\repos\UntitledGameProject\UntitledGameProject\bin\Debug\netcoreapp3.1\UntitledGameProject.pdb
+C:\Users\dtimmins\source\repos\UntitledGameProject\UntitledGameProject\obj\Debug\netcoreapp3.1\UntitledGameProject.csprojAssemblyReference.cache
+C:\Users\dtimmins\source\repos\UntitledGameProject\UntitledGameProject\obj\Debug\netcoreapp3.1\UntitledGameProject.csproj.CoreCompileInputs.cache
+C:\Users\dtimmins\source\repos\UntitledGameProject\UntitledGameProject\obj\Debug\netcoreapp3.1\UntitledGameProject.AssemblyInfoInputs.cache
+C:\Users\dtimmins\source\repos\UntitledGameProject\UntitledGameProject\obj\Debug\netcoreapp3.1\UntitledGameProject.AssemblyInfo.cs
+C:\Users\dtimmins\source\repos\UntitledGameProject\UntitledGameProject\obj\Debug\netcoreapp3.1\UntitledGameProject.dll
+C:\Users\dtimmins\source\repos\UntitledGameProject\UntitledGameProject\obj\Debug\netcoreapp3.1\UntitledGameProject.pdb
+C:\Users\dtimmins\source\repos\UntitledGameProject\UntitledGameProject\obj\Debug\netcoreapp3.1\UntitledGameProject.genruntimeconfig.cache
