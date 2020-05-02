@@ -8,6 +8,7 @@ namespace UntitledGameProject
     {
         public string CharacterName { get; set; }
         public string Weapon { get; set; }
+
         public PlayerCharacter(string characterName, string weapon)
         {
             CharacterName = characterName;
