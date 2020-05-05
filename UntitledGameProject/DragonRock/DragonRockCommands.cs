@@ -6,6 +6,13 @@ namespace UntitledGameProject
 {
     class DragonRockCommands
     {
+        public PlayerCharacter PlayerCharacter { get; }
+
+        public DragonRockCommands(PlayerCharacter playerCharacter)
+        {
+            PlayerCharacter = playerCharacter;
+        }
+
         public void DragonRockIntitaizer(string command)
         {
             var initial = command;
@@ -28,7 +35,7 @@ namespace UntitledGameProject
             switch (command)
             {
                 case "MAW":
-                    var dragonsMawDialogue = new DragonsMawDialogue();
+                    var dragonsMawDialogue = new DragonsMawDialogue(PlayerCharacter);
                     Console.WriteLine("\nYou walk through the battered batwing doors and into the Dragon's Maw.");
                     dragonsMawDialogue.YrshConversation("MAW");
                     break;
