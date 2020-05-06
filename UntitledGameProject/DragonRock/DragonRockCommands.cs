@@ -30,7 +30,7 @@ namespace UntitledGameProject
 
         public void DragonsMaw(string Command)
         {
-            var commandHandler = new CommandHandler();
+            var commandHandler = new CommandHandler(PlayerCharacter);
             var command = Command;
             switch (command)
             {

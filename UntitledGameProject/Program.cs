@@ -9,7 +9,7 @@ namespace UntitledGameProject
             GameFunctions.StartGame();
 
             PlayerCharacter playerCharacter = new PlayerCharacter("Unitialized", "Fist", 0);
-            var command = new CommandHandler();
+            var command = new CommandHandler(playerCharacter);
             var dragonRock = new DragonRockCommands(playerCharacter);
 
             dragonRock.DragonRockIntitaizer("INITIAL");

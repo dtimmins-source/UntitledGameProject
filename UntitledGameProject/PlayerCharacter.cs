@@ -17,6 +17,12 @@ namespace UntitledGameProject
             Money = money;
 
         }
-        
+
+        public void DisplayMoney(PlayerCharacter playerCharacter)
+        {
+            var _playerCharacter = playerCharacter;
+            Console.WriteLine($"\nYou have {_playerCharacter.Money} sestis.");
+        }
+
     }
 }

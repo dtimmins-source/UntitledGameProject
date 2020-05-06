@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlTypes;
+using System.Runtime.CompilerServices;
 using System.Text;
-using UntitledGameProject.The_Dragon_s_Maw;
+using UntitledGameProject.TheDragonsMaw;
 
 namespace UntitledGameProject
 {
@@ -22,8 +23,10 @@ namespace UntitledGameProject
             {
                 Console.WriteLine("\nYou look around and see a few guests sitting at scattered tables in a nearly empty common area.\n" +
                     "No one looks over as you enter. An ancient looking sandling standing atop the bar glances up as you head over and\n" +
-                    "pauses in the action on polishing a battered mug. Her ears perk and her eyes glisten as you approach.\n\n" +
-                    "\"Welcome stranger, what can I get you, a DRINK or a ROOM?\"");
+                    "pauses in the action on polishing a battered mug.\n");
+                    Console.WriteLine("LOOK around.");
+                    Console.WriteLine("Approach the INNkeeper");
+                    Console.WriteLine("LEAVE");
             }
             var response = Console.ReadLine().ToUpperInvariant();
             Yrsh(response);
@@ -31,10 +34,52 @@ namespace UntitledGameProject
 
         public void Yrsh(string Command)
         {
-            var commandHandler = new CommandHandler();
+            var commandHandler = new CommandHandler(PlayerCharacter);
             var command = Command;
             switch (command)
             {
+                case "LOOK":
+                    Console.WriteLine("\nYou look around the inn. It is well kept establishment, if a little shabby, and is decorated with\n" +
+                        "what looks like shards of old pots, worn statuettes, and other forgotten dessert detrius. The only other customers\n" +
+                        "appear to be a group of ogron in the corner playing a game of dice.\n");
+                    Console.WriteLine("LOOK around.");
+                    Console.WriteLine("Approach the INNkeeper");
+                    Console.WriteLine("LEAVE");
+                    var lookResponse = Console.ReadLine().ToUpperInvariant();
+                    if (lookResponse == "LOOK")
+                    {
+                        goto case "LOOK";
+                    }
+                    else if (lookResponse == "INN")
+                    {
+                        goto case "INN";
+                    }
+                    else if (lookResponse == "LEAVE")
+                    {
+                        goto case "LEAVE";
+                    }
+                    else
+                    {
+                        break;
+                    }
+
+                case "INN":
+                    Console.WriteLine("\n The sandling's ears perk and her eyes glisten as you approach the bar\n" +
+                        "\"Welcome stranger, what can I get you, a DRINK or a ROOM?\"");
+                    var innKeepResponse = Console.ReadLine().ToUpperInvariant();
+                    if (innKeepResponse == "DRINK")
+                    {
+                        goto case "DRINK";
+                    }
+                    else if (innKeepResponse == "ROOM")
+                    {
+                        goto case "ROOM";
+                    }
+                    else
+                    {
+                        break;
+                    }
+
                 case "DRINK":
                     Console.WriteLine("\nThe sandling pours you an amber coloured beverage and hands it to you.\n" +
                         "She holds out a dried yellow skinned hand: \"That will be a sesti.\"");
@@ -55,7 +100,11 @@ namespace UntitledGameProject
                     {
                         goto case "BROKE";
                     }
-                    
+
+                case "LEAVE":
+                    Console.WriteLine("\nYour leave the Dragon's Maw and head out into the dusty street.");
+                    GameFunctions.EndGame();
+                    break;
 
                 case "BROKE":
                     Console.WriteLine("\nYou fish around in your pockets for a moment before you remember\n" +
@@ -94,7 +143,7 @@ namespace UntitledGameProject
                     }
                     break;
                 case "MONEY":
-                    Console.WriteLine($"\nYou have {PlayerCharacter.Money} sestis.");
+                    PlayerCharacter.DisplayMoney(PlayerCharacter);
                     Console.WriteLine("\nTry to PAY or admit you are BROKE?");
                     var brokeOrBluff = Console.ReadLine().ToUpperInvariant();
                     if (brokeOrBluff == "PAY")
@@ -117,7 +166,7 @@ namespace UntitledGameProject
                     }
                     else
                     {
-                        Console.WriteLine($"The sandling scowls at you and says \"It looks like you don't have enough money.\"");
+                        Console.WriteLine($"\nThe sandling scowls at you and says \"It looks like you don't have enough money.\"");
                         goto case "BROKE";
                     }
                 default:

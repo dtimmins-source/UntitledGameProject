@@ -11,9 +11,4 @@
     <None Remove="DragonRock\The Dragon%2527s Maw\**" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Compile Include="DragonRock\The Dragon%27s Maw\DragonMawBasement.cs" />
-    <Compile Include="DragonRock\The Dragon%27s Maw\DragonsMawDialogue.cs" />
-  </ItemGroup>
-
 </Project>

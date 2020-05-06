@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UntitledGameProject.The_Dragon_s_Maw
+namespace UntitledGameProject.TheDragonsMaw
 {
     public class DragonMawBasement
     {
