@@ -5,4 +5,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="DragonRock\The Dragon%2527s Maw\**" />
+    <EmbeddedResource Remove="DragonRock\The Dragon%2527s Maw\**" />
+    <None Remove="DragonRock\The Dragon%2527s Maw\**" />
+  </ItemGroup>
+
 </Project>
